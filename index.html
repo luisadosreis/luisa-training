@@ -143,8 +143,57 @@ body{padding-bottom:68px !important}
 .transition-card{animation:transitionCardIn .22s ease-out}
 @keyframes transitionCardIn{from{transform:translateY(5px) scale(.97);opacity:0}to{transform:translateY(0) scale(1);opacity:1}}
 
+
+.modality-exercise{display:flex;flex-direction:column;gap:18px}.media-card{border:1px solid #e4dce7;border-radius:18px;overflow:hidden;background:#faf8fb}.exercise-media-image,.exercise-media-video{display:block;width:100%;max-height:440px;object-fit:contain;background:#f5f1f6}.media-empty{min-height:170px;padding:22px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:#756d78;text-align:center}.media-icon{font-size:38px}.media-action{align-items:center}.media-action .btn{margin-top:2px}.technique{display:flex;flex-direction:column;gap:6px;padding:15px 17px;border-radius:14px;background:#f6f0f8;color:#514957}.execution-panel{border-top:1px solid #e5dfe6;padding-top:18px;display:flex;align-items:flex-end;justify-content:space-between;gap:16px}.execution-panel strong{font-size:28px}.label{font-size:12px;letter-spacing:.12em;color:#7d7580;font-weight:700}.timer-row{display:flex;align-items:center;gap:12px}.timer-row>span{font-size:24px;font-variant-numeric:tabular-nums;font-weight:750}.reps-check{padding-top:4px}.rep-pills{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}.rep-pills button{width:40px;height:40px;border-radius:11px;border:1px solid #ddd5e0;background:#fff;font-weight:700}.rep-pills button.rep-done{background:#eee3f3;border-color:#9063a7;color:#765087}.attempt-check{padding:12px 14px;border-radius:12px;background:#faf7fb;color:#6e6671}.modality-complete{display:flex;justify-content:flex-end}.sub{color:#7b737d;font-size:13px}
+@media(max-width:700px){.execution-panel{align-items:stretch;flex-direction:column}.timer-row{justify-content:space-between}.exercise-media-image,.exercise-media-video{max-height:330px}}
+
+/* V14c interaction polish */
+.modality-exercise{gap:20px}
+.exercise-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.exercise-head .exercise-meta{margin-top:5px}
+.biset-badge{flex:none;border:1px solid #d8c7df;background:#f7f1f8;color:#775287;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:750}
+.media-card{margin-top:2px}
+.execution-panel{background:#fbf9fb;border:1px solid #e8e0e9;border-radius:16px;padding:18px}
+.execution-panel .btn.accent{min-width:132px}
+.reps-check{border:1px solid #e8e0e9;border-radius:16px;padding:18px;background:#fbf9fb}
+.rep-progress{font-size:15px;font-weight:700;margin-top:7px;color:#4e4651}
+.rep-pills{margin:14px 0 8px}
+.rep-pills button{transition:transform .12s ease,background .12s ease,border-color .12s ease}
+.rep-pills button:active{transform:scale(.96)}
+.rep-pills button.rep-done{background:#eee1f2;border-color:#9365a8;color:#714b80;box-shadow:inset 0 0 0 1px #c9a8d3}
+.modality-complete{justify-content:flex-start;border-top:1px solid #eee8ef;padding-top:14px}
+.modality-complete .btn{font-weight:650}
+.attempt-check{background:#fbf9fb;border:1px solid #e8e0e9}
+.attempt-check.is-done{background:#f1e8f3;border-color:#d7c1df;color:#704d7d}
+.flex-set{border:1px solid #e8e0e9;background:#fbf9fb}
+.flex-set.set-done{background:#f1e7f3;border-color:#d7c1df}
+.btn.quiet{background:transparent;border:1px solid #d8cedb;color:#70577a}
+
+/* V14d Flex/Pole clean-up */
+.simple-prescription{border:1px solid #e8e0e9;border-radius:16px;padding:17px 18px;background:#fbf9fb;display:flex;flex-direction:column;gap:6px}
+.simple-prescription strong{font-size:20px;line-height:1.25}
+.modality-complete{justify-content:flex-end;border-top:1px solid #eee8ef;padding-top:14px}
+.flex-exercise .modality-complete{justify-content:flex-start}
+.flex-exercise .btn.secondary{background:#f4eff5;border-color:#ded4e1;color:#594b60}
+.pole-exercise .modality-complete{margin-top:2px}
+.flex-exercise .execution-panel{margin-top:2px}
+.flex-exercise .execution-panel .btn.accent{min-width:128px}
+
+/* V14e: guarantee modality-specific Flex/Pole presentation */
+.flex-exercise .exercise-meta{font-size:17px}
+.flex-exercise .simple-prescription{margin-top:2px}
+.flex-exercise .modality-complete{margin-top:2px}
 </style>
-</head>
+<style id="pole-mvp-css">
+.modality-grid{display:flex;flex-direction:column;gap:12px}
+.modality-card{width:100%;border:1px solid #e5dfe6;background:#fff;border-radius:18px;padding:18px;display:grid;grid-template-columns:46px 1fr 24px;align-items:center;text-align:left;gap:12px;box-shadow:0 4px 16px rgba(40,30,45,.05);cursor:pointer}
+.modality-card>span{font-size:30px}.modality-card h2{margin:0;font-size:19px}.modality-card p{margin:4px 0 0;color:#777;font-size:12px}.modality-card>b{font-size:20px;color:#87609a}
+.category-workout{width:100%;border:1px solid #e5dfe6;text-align:left;display:flex;justify-content:space-between;align-items:center;cursor:pointer}.category-workout>span{font-size:20px;color:#87609a}.pole-note{background:#f5eff7;border-radius:14px;padding:12px}.pole-complete{margin-top:18px}
+
+/* V13 · interfaces específicas para Flexibilidade e Pole */
+.training-ref{margin-top:14px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fbf9fb}.training-ref-media{min-height:130px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#f2edf4,#faf8fa);text-align:center;padding:20px}.training-ref-icon{font-size:38px;margin-bottom:5px}.training-ref-caption{font-size:12px;color:var(--muted)}.training-ref-body{padding:11px 12px;display:flex;align-items:center;justify-content:space-between;gap:10px}.training-ref-body b{font-size:13px}.training-ref-body a{color:var(--accent);font-weight:750;font-size:12px;text-decoration:none}.training-ref-body a:hover{text-decoration:underline}
+.training-copy{margin-top:13px}.training-copy-title{font-size:13px;font-weight:800;margin-bottom:6px}.training-copy-text{font-size:14px;line-height:1.55;color:#514b54}.attention{margin-top:10px;padding:11px 12px;border-radius:12px;background:#f7f0e8;color:#65574a;font-size:13px;line-height:1.45}.execution-block{margin-top:15px;padding-top:13px;border-top:1px solid var(--line)}.execution-label{font-size:12px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.06em}.execution-target{font-size:20px;font-weight:850;margin-top:3px}.flex-timer-card{margin-top:12px}.training-checklist{display:flex;flex-direction:column;gap:8px;margin-top:13px}.training-check{display:flex;align-items:center;gap:9px;padding:10px 11px;border-radius:11px;background:#f8f5f8;font-size:13px}.training-check input{width:21px;height:21px;accent-color:var(--accent)}.skill-card{margin-top:13px;padding:12px;border-radius:13px;background:#f6f1f8;color:#5e5363;font-size:13px;line-height:1.45}.pole-note{margin-top:12px}.training-exercise-nav{grid-template-columns:30px 1fr 24px}.training-exercise-nav .exercise-nav-name small{font-size:11px}.category-workout .meta{line-height:1.4}
+</style></head>
 <body>
 <div id="app"></div>
 <script>
@@ -188,7 +237,101 @@ const workouts={
   {name:'Stiff na máquina',sets:0,reps:'',weight:'',rest:60,note:'Prescrição ainda a definir.'},
   {name:'Afundo no hack',sets:0,reps:'',weight:'',rest:60,note:'Prescrição ainda a definir.'},
   {name:'Elevação de joelhos na cadeira romana',sets:0,reps:'',weight:'',rest:60,note:'Prescrição ainda a definir.'}
- ]}
+ ]},
+
+ P1:{name:'Aula 1 · Conhecendo a Barra',desc:'Fundamentos · pegadas · giro · caminhada · pole sit',category:'pole',exercises:[
+  {name:'Mobilidade de punhos',type:'reps',target:'10 círculos por lado',category:'pole',note:'Movimente os punhos lentamente, sem dor.'},
+  {name:'Círculos de ombro',type:'reps',target:'10 para cada lado',category:'pole',note:'Mantenha o pescoço relaxado.'},
+  {name:'Cat-Cow',type:'reps',target:'8–10',category:'pole',note:'Mobilize a coluna com controle.'},
+  {name:'Hollow Hold leve',type:'timed',duration:20,target:'20 s',category:'pole',note:'Costelas para baixo e abdômen ativo.'},
+  {name:'Prancha',type:'timed',duration:20,target:'20 s',category:'pole',note:'Corpo firme, sem deixar a lombar colapsar.'},
+  {name:'Caminhar ao redor da barra',category:'pole',type:'reps',target:'5 voltas para cada lado',note:'Trabalhar postura, distância do corpo, olhar e ombros baixos.'},
+  {name:'Base Grip + True Grip',category:'pole',type:'skill',target:'Prática técnica',refUrl:'https://polepedia.com/moves/anchor-grip/',refLabel:'PolePedia · grips',note:'Treinar pressão dos dedos, polegar e alinhamento do punho.'},
+  {name:'Fireman Spin',category:'pole',type:'reps',target:'10 repetições',media:{type:'youtube',query:'fireman spin pole dance beginner'},note:'Priorizar entrada bonita, controle e saída em pé.'},
+  {name:'Pole Walk',category:'pole',type:'skill',target:'Prática',refUrl:'https://polepedia.com/moves/pole-walk/',refLabel:'PolePedia · Pole Walk',media:{type:'link',url:'https://polepedia.com/moves/pole-walk/',source:'PolePedia'},note:'Treinar caminhada, ponta dos pés, postura e coordenação.'},
+  {name:'Pole Sit',category:'pole',type:'reps',target:'5 entradas',media:{type:'youtube',query:'pole sit beginner tutorial'},note:'Entrar, encontrar o ponto de apoio, segurar e sair. Sem necessidade de subir alto.'},
+  {name:'Descida controlada',category:'pole',type:'reps',target:'3 vezes',note:'Subir um pouco e descer com controle.'},
+  {name:'🌱 Pré-requisitos conquistados',category:'pole',type:'checklist',target:'Revisar',note:'Pegada · caminhada · giro básico · primeiro contato com a pressão da pele.'}
+ ]},
+ P2:{name:'Aula 2 · Criando Força',desc:'Empurrar · puxar · início da escalada · compressão',category:'pole',exercises:[
+  {name:'Aquecimento · mobilidade',type:'sequence',target:'Repetir mobilidade da Aula 1',category:'pole',note:'Repetir punhos, ombros e Cat-Cow.'},
+  {name:'Scapular Push-up',type:'reps',target:'10',category:'pole',note:'Movimente as escápulas sem dobrar os cotovelos.'},
+  {name:'Scapular Pull',type:'reps',target:'10',category:'pole',note:'Controle a depressão e elevação das escápulas.'},
+  {name:'Pole Walk',category:'pole',type:'timed',duration:120,target:'2 min',note:'Postura, coordenação e fluidez.'},
+  {name:'Fireman Spin',category:'pole',type:'reps',target:'10 repetições',note:'Repetir buscando pernas mais organizadas e ponta dos pés.'},
+  {name:'Pole Sit',category:'pole',type:'reps',target:'5 vezes',note:'Entrar, segurar e sair.'},
+  {name:'Mini Climb',category:'pole',type:'skill',target:'Prática da sequência',note:'Sem buscar altura. Aprender: pisar → empurrar → estender → descer.'},
+  {name:'Fan Kick no chão',category:'pole',type:'skill',target:'Prática',note:'Treinar compressão abdominal e coordenação sem usar a barra.'},
+  {name:'Freeze',category:'pole',type:'timed_sets',sets:3,duration:10,target:'3 × 10 s',note:'Segurar um pequeno freeze com o corpo firme.'},
+  {name:'🌱 Pré-requisitos conquistados',category:'pole',type:'checklist',target:'Revisar',note:'Empurrar a barra · início da escalada · compressão.'}
+ ]},
+ P3:{name:'Aula 3 · Fluidez',desc:'Conexão · controle · musicalidade',category:'pole',exercises:[
+  {name:'Aquecimento · mobilidade',type:'sequence',target:'Repetir mobilidade anterior',category:'pole',note:'Repetir punhos, ombros e Cat-Cow.'},
+  {name:'Aquecimento · ativação',type:'sequence',target:'Repetir ativação anterior',category:'pole',note:'Repetir Hollow Hold, prancha e trabalho escapular.'},
+  {name:'Sequência',category:'pole',type:'sequence',target:'Repetir várias vezes',note:'Pole Walk → Fireman Spin → caminhar → Pole Sit → descer → caminhar novamente → Fireman Spin → final bonito.'},
+  {name:'Câmera lenta',category:'pole',type:'timed',duration:60,target:'1 min',note:'Fazer cada movimento extremamente devagar, buscando controle e percepção do corpo.'},
+  {name:'Missão artística',category:'pole',type:'skill',target:'1 música',note:'Escolher uma música. Experimentar respirar junto com a música e perceber onde cada movimento pode nascer.'},
+  {name:'Final',category:'pole',type:'reps',target:'3 vezes',note:'Subir um pouco → descer com controle → respirar → encerrar.'},
+  {name:'🌸 Registro da semana',category:'pole',type:'checklist',target:'Registrar',note:'O que ficou mais fácil · o que ainda parece estranho · movimento favorito · o que quero repetir · observações sobre o corpo.'}
+ ]},
+
+  H1:{name:'Hana A · Primeiras Pétalas',category:'flex',desc:'Espacate frontal · posteriores · flexores do quadril',category:'flex',exercises:[
+    {name:'Aquecimento padrão',category:'flex',type:'sequence',target:'3–5 min',note:'Marcha rápida ou polichinelos sem impacto · agachamentos confortáveis · avanços · balanços de perna · círculos de quadril e ombros · Cat-Cow.'},
+    {name:'Elevação dinâmica de perna à frente',category:'flex',type:'reps',target:'10 por lado',note:'Movimento controlado.'},
+    {name:"World's Greatest Stretch",type:'reps',target:'6 por lado',note:'Sem forçar a amplitude.'},
+    {name:'Low Lunge',category:'flex',type:'timed',duration:40,target:'40s por lado',media:{type:'youtube',query:'low lunge stretch demonstration'},note:'Quadril apontado para frente; evite compensar na lombar.'},
+    {name:'Half Split',category:'flex',type:'timed',duration:40,target:'40s por lado',media:{type:'link',url:'https://polepedia.com/moves/half-split/',source:'PolePedia'},note:'Joelho pode ficar levemente flexionado.'},
+    {name:'Couch Stretch',category:'flex',type:'timed',duration:40,target:'40s por lado',media:{type:'youtube',query:'couch stretch demonstration'},note:'Foco no quadríceps e flexor do quadril.'},
+    {name:'Pike Fold',category:'flex',type:'timed',duration:40,target:'40s',media:{type:'youtube',query:'pike stretch demonstration'},note:'Priorize os posteriores.'},
+    {name:'Active Front Split',category:'flex',type:'timed_sets',sets:2,duration:20,target:'2 × 20s por lado',note:'Use blocos se quiser. Pressione suavemente o chão com as pernas.'},
+    {name:'Boss · tentativa de espacate frontal',category:'flex',type:'timed',duration:45,target:'30–45s por lado',note:'Entre até sua amplitude atual e saia devagar.'},
+    {name:'🌺 Flor do dia',category:'flex',type:'checklist',target:'Concluir',note:'Active Front Split.'}
+  ]},
+  H2:{name:'Hana B · Caule',category:'flex',category:'flex',desc:'Ombros · coluna · peitoral · ponte',category:'flex',exercises:[
+    {name:'Aquecimento padrão',category:'flex',category:'flex',type:'sequence',target:'3–5 min',note:'Aquecimento geral + Cat-Cow.'},
+    {name:'Cat-Cow',category:'flex',category:'flex',type:'reps',target:'10',note:'Movimente a coluna lentamente.'},
+    {name:'Thread the Needle',category:'flex',category:'flex',type:'reps',target:'8 por lado',note:'Rotação torácica controlada.'},
+    {name:'Open Book',category:'flex',category:'flex',type:'reps',target:'8 por lado',note:'Rotação confortável.'},
+    {name:'Puppy Pose',category:'flex',category:'flex',type:'timed',duration:40,target:'40s',note:'Alongamento de ombros.'},
+    {name:'Wall Angels',category:'flex',category:'flex',type:'reps_sets',sets:2,target:'2 × 10',note:'Controle costelas e ombros.'},
+    {name:'Wall Shoulder Flexion',category:'flex',category:'flex',type:'reps',target:'10',note:'Amplitude confortável.'},
+    {name:'Tabletop',category:'flex',category:'flex',type:'timed_sets',sets:2,duration:25,target:'2 × 20–30s',note:'Preparação para extensão.'},
+    {name:'Reverse Plank',category:'flex',category:'flex',type:'timed_sets',sets:2,duration:20,target:'2 × 15–20s',note:'Ative glúteos e abdômen.'},
+    {name:'Prática de ponte com apoio',category:'flex',category:'flex',type:'attempts',target:'2–3 tentativas curtas',note:'Somente se estiver segura e com espaço livre.'},
+    {name:'Hollow Hold',category:'flex',category:'flex',type:'timed_sets',sets:2,duration:20,target:'2 × 20s',note:'Controle do tronco.'},
+    {name:'Superman',category:'flex',category:'flex',type:'reps',target:'10',note:'Suba pouco e com controle.'},
+    {name:'Boss · extensão em pé',category:'flex',category:'flex',type:'reps',target:'5 lentas',note:'Extensão suave e retorno controlado.'},
+    {name:'🌺 Flor do dia',category:'flex',category:'flex',type:'checklist',target:'Concluir',note:'Wall Angel.'}
+  ]},
+  H3:{name:'Hana C · Raízes',category:'flex',category:'flex',category:'flex',desc:'Espacate lateral · adutores · quadril · força em amplitude',category:'flex',exercises:[
+    {name:'Aquecimento padrão',category:'flex',category:'flex',category:'flex',type:'sequence',target:'3–5 min',note:'Aquecimento geral + balanços e círculos de quadril.'},
+    {name:'Cossack Squat',category:'flex',category:'flex',category:'flex',type:'reps_sets',sets:2,target:'2 × 6 por lado',note:'Desça somente até manter controle.'},
+    {name:'Frog Rocks',category:'flex',category:'flex',category:'flex',type:'reps',target:'15 movimentos',note:'Balanços pequenos e lentos.'},
+    {name:'90/90',category:'flex',category:'flex',category:'flex',type:'reps',target:'8 rotações',note:'Movimente os quadris ativamente.'},
+    {name:'Frog Stretch',category:'flex',category:'flex',category:'flex',type:'timed',duration:40,target:'40s',note:'Respiração calma.'},
+    {name:'Borboleta',category:'flex',category:'flex',category:'flex',type:'timed',duration:40,target:'40s + 10s de pressão suave',note:'Contração leve e relaxamento.'},
+    {name:'Wide Fold',category:'flex',category:'flex',category:'flex',type:'timed',duration:40,target:'40s',note:'Sem forçar a lombar.'},
+    {name:'Cossack Hold',category:'flex',category:'flex',category:'flex',type:'timed',duration:20,target:'20s por lado',note:'Fortalecimento na amplitude.'},
+    {name:'Adductor Lift',category:'flex',category:'flex',category:'flex',type:'reps',target:'12 por lado',note:'Eleve a perna lentamente.'},
+    {name:'Compressão em abertura',category:'flex',category:'flex',category:'flex',type:'reps',target:'8 por lado',note:'Eleve alguns centímetros com controle.'},
+    {name:'Boss · tentativa de espacate lateral',category:'flex',category:'flex',category:'flex',type:'timed',duration:45,target:'45s',note:'Apoie as mãos ou blocos.'},
+    {name:'🌺 Flor do dia',category:'flex',category:'flex',category:'flex',type:'checklist',target:'Concluir',note:'Cossack Squat.'}
+  ]},
+  H4:{name:'Hana D · Brisa',category:'flex',category:'flex',category:'flex',category:'flex',desc:'Recuperação · mobilidade leve',category:'flex',optional:true,exercises:[
+    {name:'Marcha ou caminhada no lugar',category:'flex',category:'flex',category:'flex',category:'flex',type:'timed',duration:60,target:'1 min',note:'Aumente levemente a temperatura corporal.'},
+    {name:'Cat-Cow',category:'flex',category:'flex',category:'flex',category:'flex',type:'reps',target:'8–10',note:'Movimento confortável.'},
+    {name:'90/90',category:'flex',category:'flex',category:'flex',category:'flex',type:'reps',target:'6 por lado',note:'Transições lentas.'},
+    {name:'Círculos de quadril',category:'flex',category:'flex',category:'flex',category:'flex',type:'reps',target:'8 por lado',note:'Amplitude confortável.'},
+    {name:'Círculos de ombro',category:'flex',category:'flex',category:'flex',category:'flex',type:'reps',target:'8 por lado',note:'Lentos e amplos.'},
+    {name:'Cossack Squat leve',category:'flex',category:'flex',category:'flex',category:'flex',type:'reps',target:'5 por lado',note:'Sem buscar profundidade.'},
+    {name:"World's Greatest Stretch leve",type:'reps',target:'4 por lado',note:'Fluxo contínuo.'},
+    {name:'Puppy Pose',category:'flex',category:'flex',category:'flex',category:'flex',type:'timed',duration:30,target:'30s',note:'Alongamento leve.'},
+    {name:'Pike confortável',category:'flex',category:'flex',category:'flex',category:'flex',type:'timed',duration:30,target:'30s',note:'Sem perseguir amplitude.'},
+    {name:'Frog confortável',category:'flex',category:'flex',category:'flex',category:'flex',type:'timed',duration:30,target:'30s',note:'Somente tensão leve.'},
+    {name:'Respiração final',category:'flex',category:'flex',category:'flex',category:'flex',type:'timed',duration:60,target:'1 min',note:'Respire lentamente e relaxe.'},
+    {name:'🌺 Flor do dia',category:'flex',category:'flex',category:'flex',category:'flex',type:'checklist',target:'Concluir',note:'Escolha o movimento que fez o corpo se sentir mais solto.'}
+  ]},
+
 };
 
 let state={
@@ -202,9 +345,39 @@ let state={
  history:loadHistory()
 };
 
+function normalizeSession(s){
+  if(!s || !s.key || !workouts[s.key] || !Array.isArray(s.items)) return null;
+  const w=workouts[s.key];
+  const old=Array.isArray(s.items)?s.items:[];
+  s.items=w.exercises.map((e,i)=>{
+    const prev=old[i]||{};
+    const count=e.sets||1;
+    const prevSets=Array.isArray(prev.sets)?prev.sets:[];
+    return {
+      done:!!prev.done,
+      effort:prev.effort||'',
+      hana:prev.hana||null,
+      repDone:Array.isArray(prev.repDone)?prev.repDone.slice():[],
+      sets:Array.from({length:count},(_,j)=>{
+        const p=prevSets[j]||{};
+        return {
+          reps:p.reps!==undefined?p.reps:((e.category==='flex'||e.category==='pole')?'':(e.target||e.reps||'')),
+          weight:p.weight!==undefined?p.weight:((e.category==='flex'||e.category==='pole')?'':(e.weight||'')),
+          done:!!p.done
+        };
+      })
+    };
+  });
+  if(s.current<0 || s.current>=w.exercises.length) s.current=0;
+  return s;
+}
+state.session=normalizeSession(state.session);
 if(state.session){
   state.selected=state.session.key;
   state.view='workout';
+  saveActiveSession();
+} else {
+  clearActiveSession();
 }
 
 function loadHistory(){
@@ -225,108 +398,35 @@ function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&l
 function render(){
   const app=document.getElementById('app');
   if(state.view==='home')app.innerHTML=home();
+  else if(state.view==='category')app.innerHTML=category();
   else if(state.view==='detail')app.innerHTML=detail();
   else if(state.view==='workout')app.innerHTML=workout();
   else app.innerHTML=history();
 }
 function home(){
-  return `<div class="top">
-    <div class="eyebrow">Luisa Training · MVP</div>
-    <h1>Meus treinos</h1>
-    <div class="sub">Primeira versão · Hipertrofia</div>
-  </div>
-  <div class="screen">
-    <div class="card" style="margin-bottom:14px">
-      <span class="pill">🏋️ Hipertrofia</span>
-      <h2 style="margin-top:9px">A / B / C</h2>
-      <div class="sub">Treinos atuais de musculação</div>
-    </div>
-    <div class="grid">
-      ${Object.entries(workouts).map(([k,w])=>`
-        <div class="card workout-card">
-          <div>
-            <h3>${esc(w.name)}</h3>
-            <div class="meta">${esc(w.desc)} · ${w.exercises.length} exercícios</div>
-          </div>
-          <button class="btn accent small" onclick="openWorkout('${k}')">Abrir</button>
-        </div>`).join('')}
-    </div>
-    ${state.session?`<div class="card" style="margin-top:14px">
-      <div class="row">
-        <div><b>Treino em andamento</b><div class="sub">${esc(workouts[state.session.key].name)}</div></div>
-        <button class="btn accent small" onclick="resumeSession()">Continuar</button>
-      </div>
-    </div>`:''}
-  </div>${nav('home')}`;
+return `<div class="top"><div class="eyebrow">Luisa Training · MVP</div><h1>Meus treinos</h1><div class="sub">Treino, mobilidade e evolução em um só lugar.</div></div><div class="screen"><div class="modality-grid"><button class="modality-card" onclick="openCategory('strength')"><span>🏋️</span><div><h2>Hipertrofia</h2><p>Treinos A · B · C</p></div><b>→</b></button><button class="modality-card" onclick="openCategory('flex')"><span>🧘</span><div><h2>Flexibilidade</h2><p>Projeto Hana</p></div><b>→</b></button><button class="modality-card" onclick="openCategory('pole')"><span>🩰</span><div><h2>Pole Dance</h2><p>Semana 1 · Aulas 1 · 2 · 3</p></div><b>→</b></button></div>${state.session?`<div class="card" style="margin-top:14px"><div class="row"><div><b>Treino em andamento</b><div class="sub">${esc(workouts[state.session.key].name)}</div></div><button class="btn accent small" onclick="resumeSession()">Continuar</button></div></div>`:''}</div>${nav('home')}`;
 }
+function openCategory(category){state.category=category;state.view='category';render();}
 function nav(active){
   return `<div class="tabs"><div class="tabs-inner">
     <button class="tab ${active==='home'?'active':''}" onclick="goHome()"><span>🏋️</span>Treinos</button>
     <button class="tab ${active==='history'?'active':''}" onclick="goHistory()"><span>🗂️</span>Histórico</button>
   </div></div>`;
 }
+function category(){
+ const list=state.category==='pole'?['P1','P2','P3']:state.category==='strength'?['A','B','C']:['H1','H2','H3','H4'];
+ const title=state.category==='pole'?'🩰 Pole Dance':state.category==='strength'?'🏋️ Hipertrofia':'🧘 Flexibilidade';
+ const desc=state.category==='pole'?'Semana 1 · Criando Raízes 🌱':state.category==='flex'?'Projeto Hana':'Seus treinos';
+ return `<div class="top"><button class="back" onclick="goHome()">← Voltar</button><h2>${title}</h2><div class="sub">${desc}</div></div><div class="screen"><div class="grid">${list.map(k=>{const w=workouts[k];return w?`<button class="card workout-card category-workout" onclick="openWorkout('${k}')"><div><h3>${esc(w.name)}</h3><div class="meta">${esc(w.desc)} · ${w.exercises.length} itens</div></div><span>→</span></button>`:''}).join('')}</div></div>`;
+}
 function detail(){
-  const w=workouts[state.selected];
-  return `<div class="top">
-    <button class="back" onclick="goHome()">← Voltar</button>
-    <h2>${esc(w.name)}</h2>
-    <div class="sub">${esc(w.desc)}</div>
-  </div>
-  <div class="screen">
-    <div class="card">
-      <div class="row">
-        <div><b>${w.exercises.length} exercícios</b><div class="sub">Escolha qualquer exercício durante o treino.</div></div>
-        <button class="btn accent" onclick="startSession('${state.selected}')">Começar treino</button>
-      </div>
-    </div>
-    <div class="stack" style="margin-top:12px">
-      ${w.exercises.map((e,i)=>`
-        <div class="card">
-          <div class="row">
-            <div>
-              <h3>${i+1}. ${esc(e.name)}</h3>
-              <div class="exercise-meta">
-                ${e.customSets?e.customSets.map(x=>x.join(' × ')).join(' · '):e.type==='checklist'?'Checklist':e.sets?`${e.sets} × ${esc(e.reps)}${e.weight?' · '+esc(e.weight)+' kg':''}`:'A definir'}
-                ${e.rest?` · ${e.rest}s descanso`:''}
-              </div>
-            </div>
-            ${e.pair?'<span class="pill">Biset</span>':''}
-          </div>
-          ${e.note?`<div class="technique">${esc(e.note)}</div>`:''}
-        </div>`).join('')}
-    </div>
-  </div>`;
+  const w=workouts[state.selected], cat=w.exercises.some(e=>e.category==='pole')?'pole':w.exercises.some(e=>e.category==='flex')?'flex':'strength';
+  return `<div class="top"><button class="back" onclick="goHome()">← Voltar</button><h2>${esc(w.name)}</h2><div class="sub">${esc(w.desc)}</div></div>
+  <div class="screen"><div class="card"><div class="row"><div><b>${w.exercises.length} etapas</b><div class="sub">Você pode escolher qualquer etapa durante o treino.</div></div><button class="btn accent" onclick="startSession('${state.selected}')">Começar treino</button></div></div>
+  <div class="stack" style="margin-top:12px">${w.exercises.map((e,i)=>`<div class="card"><div class="row"><div><h3>${i+1}. ${esc(e.name)}</h3><div class="exercise-meta">${exerciseSummary(e)}</div></div>${e.pair?'<span class="pill">Biset</span>':''}</div>${e.note?`<div class="technique">${esc(e.note)}</div>`:''}${(cat==='pole'||cat==='flex')&&e.refUrl?`<div class="training-ref-body" style="margin-top:10px;padding:0"><a href="${e.refUrl}" target="_blank" rel="noopener">🎥 ${esc(e.refLabel||'Ver referência')}</a></div>`:''}</div>`).join('')}</div></div>`;
 }
-function makeSession(key){
-  const w=workouts[key];
-  return {
-    key,
-    start:Date.now(),
-    current:0,
-    items:w.exercises.map(e=>({
-      done:false,
-      effort:'',
-      sets:(e.customSets||Array.from({length:e.sets||0},()=>[e.reps||'',e.weight||'']))
-        .map(x=>({reps:x[0],weight:x[1],done:false}))
-    }))
-  };
-}
-function startSession(key){
-  if(state.session && state.session.key!==key){
-    if(!confirm('Já existe um treino em andamento. Deseja descartá-lo e começar este?')) return;
-    clearActiveSession();
-  }
-  state.session=makeSession(key);
-  state.selected=key;
-  state.view='workout';
-  state.drill=false;
-  state.timer=0;
-  state.timerPaused=false;
-  clearInterval(state.timerInterval);
-  state.timerInterval=null;
-  saveActiveSession();
-  render();
-}
+function makeSession(key){const w=workouts[key];return {key,start:Date.now(),current:0,items:w.exercises.map(e=>({done:false,effort:'',hana:null,sets:Array.from({length:e.sets||1},()=>({reps:(e.category==='flex'||e.category==='pole')?'':(e.target||e.reps||''),weight:e.category==='flex'||e.category==='pole'?'':(e.weight||''),done:false}))}))};}
+function startSession(key){state.session=makeSession(key);state.view='workout';state.drill=true;state.timer=0;saveActiveSession();render();}
 function resumeSession(){
   if(!state.session)return;
   state.selected=state.session.key;
@@ -335,7 +435,7 @@ function resumeSession(){
 }
 function workout(){
   const s=state.session,w=workouts[s.key],e=w.exercises[s.current],item=s.items[s.current];
-  const doneCount=s.items.filter(x=>x.done).length;
+  const doneCount=s.items.filter(x=>x && x.done).length;
   const pct=(doneCount/w.exercises.length)*100;
   return `<div class="top compact-top">
     <button class="back" onclick="confirmExit()">← Sair do treino</button>
@@ -360,7 +460,7 @@ function workout(){
         <div class="row"><div><b>Exercícios do treino</b><div class="sub">Escolha qualquer exercício para executar.</div></div></div>
         <div class="exercise-list">
           ${w.exercises.map((ex,i)=>`
-            <button class="exercise-nav ${i===s.current?'selected':''} ${s.items[i].done?'completed':''}" onclick="jumpExercise(${i})">
+            <button class="exercise-nav training-exercise-nav ${i===s.current?'selected':''} ${s.items[i].done?'completed':''}" onclick="jumpExercise(${i})">
               <span class="exercise-nav-num">${i+1}</span>
               <span class="exercise-nav-name"><b>${esc(ex.name)}</b><small>${exerciseSummary(ex)}${ex.pair?' · Biset ↔ '+esc(ex.pair):''}</small></span>
               <span class="exercise-nav-status">${s.items[i].done?'✓':'›'}</span>
@@ -370,56 +470,110 @@ function workout(){
       <button class="btn ghost" style="width:100%;margin-top:12px" onclick="finishAttempt()">Concluir treino</button>
     `}
   </div>
-  ${state.timer>0?timerBox():''}`;
+  ${state.timer>0&&workouts[state.session?.key]?.category==='strength'?timerBox():''}`;
 }
 function exerciseSummary(e){
+  if(e.category==='flex'||e.category==='pole'){
+    if(e.type==='timed'||e.type==='timed_sets')return e.target||`${e.duration}s`;
+    if(e.type==='reps'||e.type==='reps_sets')return e.target||'Repetições';
+    if(e.type==='skill'||e.type==='sequence')return e.target||'Prática guiada';
+    return e.target||'Concluir';
+  }
   if(e.type==='checklist') return 'Mobilidade';
   if(e.customSets) return e.customSets.map(x=>x[0]+' × '+x[1]+' kg').join(' · ');
   if(e.sets) return `${e.sets} × ${esc(e.reps)}${e.weight?' · '+esc(e.weight)+' kg':''}`;
   return 'Prescrição a definir';
 }
-function exerciseBody(e,item){
-  if(e.type==='checklist'){
-    return `<div class="exercise-head"><div>
-      <div class="exercise-title">${esc(e.name)}</div>
-      <div class="exercise-meta">${esc(e.note)}</div>
-    </div></div>
-    <label style="display:flex;align-items:center;gap:9px;margin-top:18px">
-      <input class="check" type="checkbox" ${item.done?'checked':''} onchange="toggleExercise(${state.session.current},this.checked)">
-      Exercício concluído
-    </label>`;
-  }
-
-  let rows='';
-  if(item.sets.length===0){
-    rows='<div class="empty">Prescrição ainda a definir. Você pode marcar este exercício como concluído quando souber o que fez.</div>';
-  }else{
-    rows=`<table class="set-table"><thead><tr><th>Série</th><th>Reps</th><th>Kg</th><th>✓</th></tr></thead><tbody>
-      ${item.sets.map((x,i)=>`<tr class="${x.done?'set-done':''}">
-        <td>${i+1}</td>
-        <td><input class="num ${x.done?'field-done':''}" inputmode="decimal" value="${esc(x.reps)}" onchange="setVal(${state.session.current},${i},'reps',this.value)"></td>
-        <td><input class="num ${x.done?'field-done':''}" inputmode="decimal" value="${esc(x.weight)}" placeholder="kg" onchange="setVal(${state.session.current},${i},'weight',this.value)"></td>
-        <td><input class="check" type="checkbox" ${x.done?'checked':''} onchange="setSet(${state.session.current},${i},this.checked)"></td>
-      </tr>`).join('')}
-    </tbody></table>`;
-  }
-
-  const pairLabel=e.pair ? `<span class="pill biset-pill">Biset · ${esc(e.name===e.pair?'':'')}${esc(getBisetPosition(state.session.current))}</span>` : '';
-
-  return `<div class="exercise-head">
-    <div><div class="exercise-title">${esc(e.name)}</div>
-      <div class="exercise-meta">${e.sets?`${e.sets} séries · alvo ${esc(e.reps)}`:'Prescrição livre'} · descanso 1 min</div>
+function referenceBlock(e){
+  if(e.refUrl)return `<div class="training-ref"><div class="training-ref-media"><div><div class="training-ref-icon">🎥</div><div class="training-ref-caption">Referência externa</div></div></div><div class="training-ref-body"><b>${esc(e.refLabel||'Referência visual')}</b><a href="${e.refUrl}" target="_blank" rel="noopener">Abrir referência ↗</a></div></div>`;
+  const q=encodeURIComponent(e.name+' exercise demonstration');
+  return `<div class="training-ref"><div class="training-ref-media"><div><div class="training-ref-icon">🎥</div><div class="training-ref-caption">Ainda sem referência curada</div></div></div><div class="training-ref-body"><b>Vídeo de demonstração</b><a href="https://www.youtube.com/results?search_query=${q}" target="_blank" rel="noopener">Buscar no YouTube ↗</a></div></div>`;
+}
+function flexPoleBody(e,item){
+  const isPole=e.category==='pole', timed=e.type==='timed', grouped=e.type==='timed_sets'||e.type==='reps_sets';
+  const repeatable=e.type==='reps'||e.type==='reps_sets';
+  return `<div class="exercise-head"><div><div class="exercise-title">${esc(e.name)}</div><div class="exercise-meta">${esc(e.target||'Prática')}</div></div></div>
+    ${referenceBlock(e)}
+    ${e.note?`<div class="training-copy"><div class="training-copy-title">Como fazer / cuidar</div><div class="training-copy-text">${esc(e.note)}</div></div>`:''}
+    ${timed?`<div class="execution-block"><div class="execution-label">Tempo</div><div class="execution-target">${esc(e.target||fmt(e.duration))}</div><div class="flex-timer-card"><strong id="flex-countdown">${item.done?'Concluído':fmt(e.duration)}</strong><button class="btn accent" onclick="runTrainingTimer(${state.session.current},${e.duration})">${item.done?'Repetir':'Iniciar timer'}</button></div></div>`:''}
+    ${grouped?`<div class="execution-block"><div class="execution-label">Repetições / séries</div><div class="training-checklist">${item.sets.map((x,i)=>`<label class="training-check"><input type="checkbox" ${x.done?'checked':''} onchange="completeFlexSet(${state.session.current},${i})"><span>${esc(e.type==='timed_sets'?`Série ${i+1} · ${e.duration}s`:`Série ${i+1} · ${e.target||''}`)}</span></label>`).join('')}</div></div>`:''}
+    ${repeatable&&!grouped?`<div class="execution-block"><div class="execution-label">Repetições</div><div class="execution-target">${esc(e.target||'Concluir')}</div><div class="training-checklist"><label class="training-check"><input type="checkbox" ${item.done?'checked':''} onchange="toggleExercise(${state.session.current},this.checked)"><span>${item.done?'Concluído':'Marcar quando terminar'}</span></label></div></div>`:''}
+    ${(e.type==='skill'||e.type==='sequence'||e.type==='checklist'||(!timed&&!repeatable&&!grouped))?`<div class="execution-block"><div class="execution-label">Etapa</div><div class="execution-target">${esc(e.target||'Concluir')}</div><div class="training-checklist"><label class="training-check"><input type="checkbox" ${item.done?'checked':''} onchange="toggleExercise(${state.session.current},this.checked)"><span>${item.done?'Concluída':'Concluir esta etapa'}</span></label></div></div>`:''}
+    ${isPole?`<div class="skill-card">🩰 Faça primeiro no chão sempre que estiver aprendendo um movimento novo. Para movimentos em que o corpo sai do chão, use sua barra em condições seguras e siga as orientações da sua professora.</div>`:''}
+    <div class="exercise-actions"><button class="btn ${item.done?'secondary':'accent'}" onclick="toggleExercise(${state.session.current},${!item.done})">${item.done?'Desmarcar':'Concluir exercício ✓'}</button></div>`;
+}
+function mediaMarkup(e){
+  if(!e.media)return `<div class="media-empty"><div class="media-icon">🎥</div><span>Referência ainda não adicionada</span></div>`;
+  if(e.media.type==='image')return `<img class="exercise-media-image" src="${esc(e.media.url)}" alt="Referência de ${esc(e.name)}" loading="lazy">`;
+  if(e.media.type==='video')return `<video class="exercise-media-video" controls playsinline preload="metadata" src="${esc(e.media.url)}"></video>`;
+  const q=encodeURIComponent(e.media.query||e.name+' demonstration');
+  if(e.media.type==='youtube')return `<div class="media-empty media-action"><div class="media-icon">▶️</div><span>Vídeo de demonstração</span><button class="btn small secondary" onclick="openExternal('https://www.youtube.com/results?search_query=${q}')">Buscar no YouTube ↗</button></div>`;
+  if(e.media.type==='link')return `<div class="media-empty media-action"><div class="media-icon">🎬</div><span>Referência em ${esc(e.media.source||'fonte externa')}</span><button class="btn small secondary" onclick="openExternal('${esc(e.media.url)}')">Abrir referência ↗</button></div>`;
+  return '';
+}
+function modalityExecution(e,item){
+  const isPole=e.category==='pole';
+  const timed=e.type==='timed';
+  const grouped=e.type==='timed_sets'||e.type==='reps_sets';
+  const attempts=e.type==='attempts';
+  const simple=e.type==='reps'||e.type==='skill'||e.type==='sequence'||e.type==='checklist'||(!timed&&!grouped&&!attempts);
+  return `<div class="modality-exercise ${isPole?'pole-exercise':'flex-exercise'}">
+    <div class="exercise-head">
+      <div><div class="exercise-title">${esc(e.name)}</div><div class="exercise-meta">${esc(e.target||'')}</div></div>
+      ${isPole&&e.pair?`<span class="biset-badge">${esc(getBisetPosition(state.session.current))}</span>`:''}
     </div>
-    ${pairLabel}
-  </div>
-  ${e.note?`<div class="technique">${esc(e.note)}</div>`:''}
-  ${rows}
-  <div class="exercise-actions">
-    <button class="btn small ${item.done?'secondary':'accent'}" onclick="toggleExercise(${state.session.current},${!item.done})">${item.done?'Desmarcar':'Finalizar exercício'}</button>
-  </div>
-  <div class="rir"><b>Esforço / RIR</b><div>
-    ${['3+','1–2','0'].map(v=>`<label><input type="radio" name="rir" ${item.effort===v?'checked':''} onchange="setEffort('${v}')"> ${v==='3+'?'Poderia fazer 3+':v==='1–2'?'Poderia fazer 1–2':'Não faria outra'}</label>`).join('')}
-  </div></div>`;
+
+    <div class="media-card">${mediaMarkup(e)}</div>
+
+    ${e.note?`<div class="technique"><b>Como fazer / cuidar</b><span>${esc(e.note)}</span></div>`:''}
+
+    ${timed?`
+      <div class="execution-panel">
+        <div><div class="label">TEMPO</div><strong>${esc(e.target||fmt(e.duration))}</strong></div>
+        <div class="timer-row">
+          <span id="flex-countdown">${state.timer>0?fmt(state.timer):fmt(e.duration)}</span>
+          <button class="btn accent" onclick="runTrainingTimer(${state.session.current},${e.duration})">${state.timer>0?'Reiniciar':'Iniciar timer'}</button>
+        </div>
+      </div>`:''}
+
+    ${grouped?`
+      <div class="flex-sets">
+        <div class="execution-label">Etapas</div>
+        ${item.sets.map((x,i)=>`
+          <div class="flex-set ${x.done?'set-done':''}">
+            <div><b>${i+1}</b><span>${e.type==='timed_sets'?e.duration+'s':esc(e.target)}</span></div>
+            <button class="btn small quiet" onclick="completeFlexSet(${state.session.current},${i})">${x.done?'✓ Feita':'Marcar'}</button>
+          </div>`).join('')}
+      </div>`:''}
+
+    ${attempts?`
+      <div class="attempt-check ${item.done?'is-done':''}">
+        ${item.done?'✓ Etapa concluída':'Faça a tentativa e conclua quando terminar.'}
+      </div>`:''}
+
+    ${simple?`
+      <div class="simple-prescription">
+        <div class="execution-label">${isPole?'PRÁTICA':'PRESCRIÇÃO'}</div>
+        <strong>${esc(e.target||'Concluir quando terminar')}</strong>
+        <span class="sub">${isPole?'Faça a quantidade indicada e marque ao terminar.':'Faça a quantidade indicada. Você só precisa marcar ao finalizar.'}</span>
+      </div>`:''}
+
+    <div class="modality-complete">
+      <button class="btn small secondary" onclick="toggleExercise(${state.session.current},${!item.done})">
+        ${item.done?'Desmarcar exercício':'Concluir exercício'}
+      </button>
+    </div>
+  </div>`;
+}
+function exerciseBody(e,item){
+  // Algumas entradas antigas do catálogo não tinham category no próprio exercício.
+  // Herdamos a categoria do treino para que Flex/Pole nunca caiam no layout de musculação.
+  const category=e.category||workouts[state.session.key]?.category;
+  const viewExercise=category?{...e,category}:e;
+  if(category==='pole'||category==='flex')return modalityExecution(viewExercise,item);
+  if(item.sets.length===0)return `<div class="empty">Prescrição ainda a definir.</div>`;
+  const rows=`<table class="set-table"><thead><tr><th>Série</th><th>Reps</th><th>Kg</th><th>✓</th></tr></thead><tbody>${item.sets.map((x,i)=>`<tr class="${x.done?'set-done':''}"><td>${i+1}</td><td><input class="num ${x.done?'field-done':''}" inputmode="decimal" value="${esc(x.reps)}" onchange="setVal(${state.session.current},${i},'reps',this.value)"></td><td><input class="num ${x.done?'field-done':''}" inputmode="decimal" value="${esc(x.weight)}" placeholder="kg" onchange="setVal(${state.session.current},${i},'weight',this.value)"></td><td><input class="check" type="checkbox" ${x.done?'checked':''} onchange="setSet(${state.session.current},${i},this.checked)"></td></tr>`).join('')}</tbody></table>`;
+  return `<div class="exercise-head"><div><div class="exercise-title">${esc(e.name)}</div><div class="exercise-meta">${e.sets} séries · alvo ${esc(e.reps)} · descanso 1 min</div></div></div>${e.note?`<div class="technique">${esc(e.note)}</div>`:''}${rows}<div class="exercise-actions"><button class="btn small ${item.done?'secondary':'accent'}" onclick="toggleExercise(${state.session.current},${!item.done})">${item.done?'Desmarcar':'Finalizar exercício'}</button></div>`;
 }
 function getBisetPosition(index){
   const e=workouts[state.session.key].exercises[index];
@@ -482,6 +636,51 @@ function updateTimerOnly(){
 }
 function pauseTimer(){state.timerPaused=!state.timerPaused;render()}
 function stopTimer(){clearInterval(state.timerInterval);state.timerInterval=null;state.timer=0;state.timerPaused=false;render()}
+function runPoleTimer(ex,duration){
+ clearInterval(state.timerInterval);state.timerInterval=null;state.timer=duration;render();
+ state.timerInterval=setInterval(()=>{
+  if(state.timerPaused)return;
+  state.timer=Math.max(0,state.timer-1);
+  const el=document.getElementById('flex-countdown');if(el)el.textContent=fmt(state.timer);
+  if(state.timer<=0){
+   clearInterval(state.timerInterval);state.timerInterval=null;playTimerSound();
+   state.session.items[ex].done=true;saveActiveSession();
+   showExerciseTransition(workouts[state.session.key].exercises[ex].name,'Tempo concluído · saia da posição com controle.',false,()=>{
+    const next=ex+1;if(next<workouts[state.session.key].exercises.length){state.session.current=next;state.drill=true;saveActiveSession();render();}
+   });
+  }
+ },1000);
+}
+function openExternal(url){window.open(url,'_blank','noopener,noreferrer');}
+function toggleRep(ex,i){
+  const item=state.session.items[ex];
+  if(!Array.isArray(item.repDone))item.repDone=[];
+  item.repDone[i]=!item.repDone[i];
+  // Repetitions are progress markers. They do not complete/fade the whole exercise.
+  saveActiveSession();render();
+}
+function runTrainingTimer(ex,duration){
+  clearInterval(state.timerInterval);
+  state.timerPaused=false;
+  state.timerInterval=null;
+  state.timer=duration;
+  render();
+  state.timerInterval=setInterval(()=>{
+    if(state.timerPaused)return;
+    state.timer=Math.max(0,state.timer-1);
+    const el=document.getElementById('flex-countdown');
+    if(el)el.textContent=fmt(state.timer);
+    if(state.timer<=0){
+      clearInterval(state.timerInterval);
+      state.timerInterval=null;
+      playTimerSound();
+      state.timer=0;
+      toggleExercise(ex,true);
+    }
+  },1000);
+}
+function completeFlexSet(ex,i){state.session.items[ex].sets[i].done=true;if(state.session.items[ex].sets.every(x=>x.done))state.session.items[ex].done=true;saveActiveSession();render();}
+function setHanaScale(v){state.session.items[state.session.current].hana=v;saveActiveSession();render();}
 function setVal(ex,i,k,v){state.session.items[ex].sets[i][k]=v;saveActiveSession()}
 function setSet(ex,i,checked){
   const s=state.session;
@@ -781,7 +980,7 @@ function showHistory(id){
       ${h.items.map((it,i)=>{
         const e=workouts[h.workout].exercises[i];
         return `<div class="card"><div class="row"><b>${i+1}. ${esc(e.name)}</b><span class="pill">${it.done?'Concluído':'Parcial'}</span></div>
-          ${it.sets.length?it.sets.map((x,j)=>`<div class="detail-line"><span>Série ${j+1}</span><span>${esc(x.reps||'—')} reps · ${esc(x.weight||'—')} kg ${x.done?'✓':''}</span></div>`).join(''):''}
+          ${Array.isArray(it.sets)&&it.sets.length?it.sets.map((x,j)=>`<div class="detail-line"><span>Série ${j+1}</span><span>${esc(x.reps||'—')} reps · ${esc(x.weight||'—')} kg ${x.done?'✓':''}</span></div>`).join(''):''}
           ${it.effort?`<div class="detail-line"><span>RIR</span><span>${esc(it.effort)}</span></div>`:''}
         </div>`;
       }).join('')}
@@ -793,7 +992,10 @@ function closeModal(){document.querySelector('.modal')?.remove()}
 function openWorkout(k){state.selected=k;state.view='detail';render()}
 function goHome(){state.view='home';state.selected=null;state.drill=false;render()}
 function goHistory(){state.view='history';render()}
-render();
+try{render();}catch(err){
+  console.error(err);
+  document.getElementById('app').innerHTML='<div style="padding:24px;font-family:system-ui"><h2>Ops, encontrei um erro ao carregar o treino.</h2><p>Recarregue a página. Se continuar, me mande este erro: <code>'+String(err.message||err)+'</code></p></div>';
+}
 </script>
 </body>
 </html>
